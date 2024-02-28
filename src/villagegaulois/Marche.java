@@ -8,9 +8,9 @@ public class Marche {
 	private Etal etal[];
 	private int nbEtal;
 	
-	public Marche(Etal[] etal, int nbEtal) {
+	public Marche(int nbEtal) {
 		this.nbEtal = nbEtal;
-		this.etal = new Etal[nbEtal];
+		etal = new Etal[nbEtal];
 //		for (int i = 0; i < nbEtal; i++)
 //		{
 //			
@@ -48,7 +48,6 @@ public class Marche {
 				c++;
 			}
 		}
-		
 		
 		Etal t[] = new Etal[c];
 		int n = 0;

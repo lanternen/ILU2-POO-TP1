@@ -8,10 +8,12 @@ public class Village {
 	private Chef chef;
 	private Gaulois[] villageois;
 	private int nbVillageois = 0;
+	private Marche marche;
 
-	public Village(String nom, int nbVillageoisMaximum) {
+	public Village(String nom, int nbVillageoisMaximum, int nbEtals) {
 		this.nom = nom;
 		villageois = new Gaulois[nbVillageoisMaximum];
+		marche = new Marche(nbEtals);
 	}
 
 	public String getNom() {
@@ -56,4 +58,20 @@ public class Village {
 		}
 		return chaine.toString();
 	}
+	
+	
+	
+	public String installerVendeur(Gaulois vendeur, String produit, int nbProduit) {
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
