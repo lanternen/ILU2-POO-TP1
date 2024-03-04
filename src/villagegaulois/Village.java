@@ -44,7 +44,7 @@ public class Village {
 		return null;
 	}
 
-	public String afficherVillageois() {
+	public String afficherVillageois() {		
 		StringBuilder chaine = new StringBuilder();
 		if (nbVillageois < 1) {
 			chaine.append("Il n'y a encore aucun habitant au village du chef "
@@ -62,8 +62,21 @@ public class Village {
 	
 	
 	public String installerVendeur(Gaulois vendeur, String produit, int nbProduit) {
+		int indice = marche.trouverEtalLibre();
 		
+		StringBuilder chaine = new StringBuilder();
+		chaine.append(vendeur.getNom() + " cherche un endroit pour vendre " + nbProduit + " " + produit + ".\n");
+		if (indice < 0) {
+			chaine.append(vendeur.getNom() + " n'a pas trouve d'endroit pour vendre.\n");
+		} else {
+			chaine.append("Le vendeur "+ vendeur.getNom()+" vend " + " des " + produit + " à l'étal n° " + indice);
+		}
+		return chaine.toString();
 	}
+
+//	public String rechercherVendeursProduit(String produit) {
+//		
+//	}
 	
 	
 	

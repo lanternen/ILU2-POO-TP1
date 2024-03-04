@@ -1,6 +1,5 @@
 package villagegaulois;
 
-import villagegaulois.Etal;
 import personnages.*;
 
 public class Marche {
@@ -73,7 +72,7 @@ public class Marche {
 	
 	
 	public void afficherMarche() {
-		System.out.println("Le marché :");
+		System.out.println("Le marche :");
 		int c = 0;
 		for (int i = 0; i < nbEtal; i++) {
 			etal[i].afficherEtal();
@@ -81,7 +80,7 @@ public class Marche {
 		}
 		int nbEtalVide = nbEtal - c;
 		if (nbEtalVide > 0) {
-			System.out.println("Il reste " + nbEtalVide + " étals non utilisés dans le marché.");
+			System.out.println("Il reste " + nbEtalVide + " etals non utilises dans le marche.");
 		}
 	}
 	
