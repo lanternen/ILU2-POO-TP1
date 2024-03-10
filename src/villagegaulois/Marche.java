@@ -10,10 +10,10 @@ public class Marche {
 	public Marche(int nbEtal) {
 		this.nbEtal = nbEtal;
 		etal = new Etal[nbEtal];
-//		for (int i = 0; i < nbEtal; i++)
-//		{
-//			
-//		}
+		for (int i = 0; i < nbEtal; i++)
+		{
+			etal[i].occuperEtal(null, null, 0);
+		}
 	}
 	
 	
