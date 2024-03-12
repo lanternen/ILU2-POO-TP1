@@ -78,20 +78,23 @@ public class Village {
 		
 		StringBuilder chaine = new StringBuilder();
 		
-		Etal e[] = marche.trouverEtals(produit);;
+
+		Etal e[] = marche.trouverEtals(produit);
+		
 		int nbVendeurs = 0;
 		
+
+		if (e[0] == null) {
+				chaine.append("Il n'y a pas de vendeur qui propose des " + produit + " au marché.\n");
+		} 
 		
-		if (e.length == 0) {
-			chaine.append("Il n'y a pas de vendeur qui propose des " + produit + " au marché.\n");
-		} else if (e.length == 1) {
+		if (e.length == 1) {
 			chaine.append("Seul le vendeur "+ e[0].getVendeur()+" propose des " + produit + " au marché.");
 		}
 		else {
 			chaine.append("Les vendeurs qui proposent des " + produit + " sont :\n");
-			for (int i = 0; i < e.length; i++)
-			{
-				chaine.append("- " + e[i].getVendeur());
+			for (int i = 0; i < e.length; i++) {
+			chaine.append("- " + e[i].getVendeur());
 			}
 		}
 		return chaine.toString();

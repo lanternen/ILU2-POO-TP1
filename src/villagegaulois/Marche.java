@@ -12,7 +12,7 @@ public class Marche {
 		etal = new Etal[nbEtal];
 		for (int i = 0; i < nbEtal; i++)
 		{
-			etal[i].occuperEtal(null, null, 0);
+			etal[i] = new Etal();
 		}
 	}
 	
@@ -43,17 +43,21 @@ public class Marche {
 	public Etal[] trouverEtals(String produit) {
 		int c = 0;
 		for (int i = 0; i < nbEtal; i++) {
-			if (etal[i].contientProduit(produit)) {
-				c++;
+			if (etal[i] != null && produit != null) {
+				if (etal[i].contientProduit(produit)) {
+					c++;
+				}
 			}
 		}
 		
 		Etal t[] = new Etal[c];
 		int n = 0;
 		for (int i = 0; i < nbEtal; i++) {
-			if (etal[i].contientProduit(produit)) {
-				t[n] = etal[i];
-				n++;
+			if (etal[i] != null && produit != null) {
+				if (etal[i].contientProduit(produit)) {
+					t[n] = etal[i];
+					n++;
+				}
 			}
 		}
 		
