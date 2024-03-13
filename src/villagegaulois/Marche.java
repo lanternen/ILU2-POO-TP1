@@ -41,16 +41,16 @@ public class Marche {
 	
 	
 	public Etal[] trouverEtals(String produit) {
-		int c = 0;
-		for (int i = 0; i < nbEtal; i++) {
-			if (etal[i] != null && produit != null) {
-				if (etal[i].contientProduit(produit)) {
-					c++;
-				}
-			}
-		}
-		
-		Etal t[] = new Etal[c];
+//		int c = 0;
+//		for (int i = 0; i < nbEtal; i++) {
+//			if (etal[i] != null && produit != null) {
+//				if (etal[i].contientProduit(produit)) {
+//					c++;
+//				}
+//			}
+//		}
+//		
+		Etal t[] = new Etal[etal.length];
 		int n = 0;
 		for (int i = 0; i < nbEtal; i++) {
 			if (etal[i] != null && produit != null) {

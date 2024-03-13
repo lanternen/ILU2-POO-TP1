@@ -81,14 +81,21 @@ public class Village {
 
 		Etal e[] = marche.trouverEtals(produit);
 		
+		int nbEtalTrouve = 0;
+		for (int i = 0; i < e.length; i++) {
+			if (e[i] == null) {
+				nbEtalTrouve++;
+			}
+		}
+		
+		
 		int nbVendeurs = 0;
 		
-
-		if (e[0] == null) {
+		if (nbEtalTrouve == 0) {
 				chaine.append("Il n'y a pas de vendeur qui propose des " + produit + " au marché.\n");
 		} 
 		
-		if (e.length == 1) {
+		if (nbEtalTrouve == 1) {
 			chaine.append("Seul le vendeur "+ e[0].getVendeur()+" propose des " + produit + " au marché.");
 		}
 		else {
